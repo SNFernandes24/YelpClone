@@ -3,9 +3,15 @@ const app = express();
 const bodyParser = require("body-parser");
 
 app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"), bodyParser.urlencoded({extended: true}));
 
 let campgrounds = [
+    {name: "Salmon Creek", image: "https://images.pexels.com/photos/589841/pexels-photo-589841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    {name: "Granite Hill", image: "https://images.pexels.com/photos/1003816/pexels-photo-1003816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    {name: "Mountain Goat", image: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    {name: "Salmon Creek", image: "https://images.pexels.com/photos/589841/pexels-photo-589841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    {name: "Granite Hill", image: "https://images.pexels.com/photos/1003816/pexels-photo-1003816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    {name: "Mountain Goat", image: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
     {name: "Salmon Creek", image: "https://images.pexels.com/photos/589841/pexels-photo-589841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
     {name: "Granite Hill", image: "https://images.pexels.com/photos/1003816/pexels-photo-1003816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
     {name: "Mountain Goat", image: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"}
